@@ -692,7 +692,7 @@ ul{
     background-color: wheat;
 }
 
-@media only screen and (min-width:1297px) and (max-width:1700px){
+/* @media only screen and (min-width:1297px) and (max-width:1700px){
     
     .wrapper{
         display: flex;
@@ -753,10 +753,10 @@ ul{
     .bottom a{
         font-size: 28px;
     }
-}
+} */
 
 
-@media only screen and (min-width:673px) and (max-width:1296px){
+@media only screen and (min-width:673px) and (max-width:1700px){
     
     .wrapper{
         display: flex;
