@@ -1,9 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
 
+
+/* :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::VALEURS GLOBALES:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
 body{
     background-color:#0f0f0f;
     color:wheat;
+    transition:2s
 }
 a{
     text-decoration: none;
@@ -13,17 +16,24 @@ a{
 
 .wrapper{
     display: grid;
-    grid-template-columns: 2fr 8fr;
+    grid-template-columns: 1fr 8fr;
+}
+/* :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::ASIDE:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+aside{
+    display: grid;
+    grid-template-rows: 1fr 2fr 0.5fr;
+    height: 970px;
+    position:sticky;
+    top:0;
+    background-color: rgba(0, 0, 0, 0.431);
+
 }
 
-aside{
-    /* background-color: rgb(0, 183, 255); */
-    display: grid;
-    grid-template-rows: 3fr 3fr 1fr 10fr;
-    grid-template-columns: 1fr;
-    justify-content: center;
-    background-color:rgba(0, 0, 0, 0.431);
+.title img{
+    border-radius: 5px;
 }
+
+
 
 .reseaux{
     display: flex;
@@ -32,20 +42,42 @@ aside{
 }
 
 .title{
-    /* background-color: #ad5d5d; */
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
+    width: 100%;
     font-size: 28px;
-    background-color:rgba(0, 0, 0, 0.431);
+}
+.middle{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 23px;
+    width: 100%;
+    
 }
 
-.middle{
-    background-color: #0f0f0f;
+.middle a{
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 23px;
+    margin-bottom: 15px;
+    width: 100%;
+    justify-content: center;
+    background-color: #0f0f0f;
+    transition: 0.3s;
+}
+
+.middle a:hover {
+    background-color:rgb(253, 190, 74);
+    color: #0f0f0f;
+}
+
+.bottom a:hover{
+    color:rgb(253, 190, 74);
+}
+
+a:focus{
+    color:rgb(253, 190, 74);
 }
 
 .bottom{
@@ -54,9 +86,12 @@ aside{
     justify-content: space-around;
     align-items: center;
     font-size: 50px;
-    background-color:rgba(0, 0, 0, 0.431);
+    width: 100%;
+    transition: 0.3s;
 }
+/* :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::FIN ASIDE::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
 
+/* ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::DROITE:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
 .droite{
     display: grid;
     
@@ -168,6 +203,7 @@ ul{
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: rgba(0, 0, 0, 0.431);
 }
 
 
@@ -175,7 +211,6 @@ ul{
     width: 80%;
     display:flex;
     justify-content: space-evenly;
-    box-shadow: black 10px 10px 10px 0px;
     /* background-color:#ad5d5d; */
     flex-flow: wrap row;
 }
@@ -251,7 +286,6 @@ ul{
     display: flex;
     flex-direction: column;
     align-items: center;
-
 }
 
 .illu{
@@ -374,6 +408,7 @@ ul{
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: rgba(0, 0, 0, 0.431)
 }
 
 .coord{
@@ -433,6 +468,8 @@ ul{
         list-style-type: none;
         display: flex;
         flex-direction: column;
+        padding-left: 0;
+        margin-right:15px ;
         /* background-color: #ad5d5d; */
         
     }
@@ -448,6 +485,7 @@ ul{
         border: solid 2px;
         border-color: white;
         color:wheat;
+        margin-left: 15px;
     }
     
 
@@ -549,7 +587,155 @@ ul{
    .slider.round:before {
      border-radius: 50%;
    }
+
+   .lightMode {
+    font-family: 'Quicksand',sans-serif;
+    background-color: rgba(153, 153, 152, 0.397);
+    color: papayawhip;
+    transition:3s;
+
+}
+
+
+
+.lightMode #list a, .lightMode aside a{
+    color:wheat;
+}
+
+.lightMode h1,.lightMode h2,.lightMode header , .lightMode #txtMaq ,.lightMode #txtIntS , .lightMode #txtIntW , .lightMode #txtGest , .lightMode #txtBack , .lightMode #txtBase , .lightMode #txtSecu{
+    
+    color: black;
+
+}
+
+.lightMode aside,.lightMode #com {
+   color: papayawhip; 
+   background-color: rgb(133, 131, 131);
+   transition:3s; 
+
+}
+
+.lightMode #logages img {
+    filter: drop-shadow(7px 7px 7px black);
+    -webkit-filter: drop-shadow(7px 7px 7px black);
+}
+
+.lightMode #realisations a{
+    background-color:#d8d8d800;
+}
+
+.lightMode .pop{
+    background-color: papayawhip;
+    color: #0f0f0f;
+    font-weight: bolder;
+    border: solid black 1px;
+    box-shadow: 2px 2px 2px 2px;
+}
+
+.lightMode #logos i , .lightMode #coord a, .lightMode #index {
+    color: #0f0f0f;
+}
+
+.lightMode #centre p{
+    color: #0f0f0f;
+}
+
+.lightMode #cv img{
+    border: solid black 2px;
+    box-shadow: #0f0f0f 7px 7px 7px 0px;
+}
+
+.lightMode .coord :hover {
+    color: firebrick;
+}
+
+.lightMode  .list p:hover, .lightMode #logos i:hover , .lightMode .title p:hover{
+    color: firebrick;
+}
+
+.lightMode .cv img:hover{
+    border:firebrick solid 2px;
+}
  
+@media only screen and (min-width:991px) and (max-width:1296px){
+    header{
+        font-size:24px;
+        display: flex;
+        justify-content: center;
+    }
+
+
+    h2{
+        font-size:19px;
+    }
+
+    aside{
+        font-size:17px;
+    }
+    .bottom a{
+        font-size: 28px;
+    }
+
+    #txtBtn{
+        width: 50px;  
+    }
+
+    #blocSwitch{
+        width: 150px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+    .switch {
+        width: 60px;
+        height: 34px;
+        float:right;
+        margin: auto;
+      }
+}
+
+@media only screen and (min-width:673px) and (max-width:990px){
+    header{
+        font-size:15px;
+    }
+
+    h2{
+        font-size:14px;
+    }
+
+    aside a{
+        font-size:13px;
+    }
+
+    .bottom a{
+        font-size: 23px;
+    }
+
+}
+
+@media only screen and (max-width:672px){
+    header{
+        font-size:15px;
+    }
+
+    h2{
+        font-size:14px;
+    }
+
+    aside a{
+        font-size:13px;
+    }
+
+    .bottom a{
+        font-size: 23px;
+    }
+
+}
+
+
 
 
 

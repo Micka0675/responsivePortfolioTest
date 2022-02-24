@@ -35,7 +35,7 @@
                         </label>
                     </div>
                 </header>
-                <article class="competences">
+                <article id="competences" class="competences">
                     <h2>Compétences</h2>
                     <section class="blocLog">
                         <div class="logages">
@@ -67,7 +67,7 @@
                         <a href="images/cv.jpg"><img src="images/cv.jpg" alt="cv"></a>
                     </section>
                 </article>
-                <article class="realisations">
+                <article id="realisations" class="realisations">
                     <h2>Realisations</h2>
                     <div class="blocReal">
                         <a class="real" href="https://micka0675.github.io/jeuDuPendu/" target="blank">
@@ -88,7 +88,7 @@
                         </a>   
                     </div>
                 </article>
-                <article class="formations">
+                <article id="formations" class="formations">
                     <h2>Aptitudes</h2>
                     <select id="choix1" class="choix1">
                         <option class="opts">-</option>
@@ -205,7 +205,7 @@
                         </p>
                     </div>
                 </article>
-                <article class="contact">
+                <article id="contact" class="contact">
                     <h2>Me contacter (Work In Progress)</h2>
                     <section id="coord" class="coord">
                         <a href="mailto:mickael.rouge@outlook.fr" target="blank"><p><i class="fas fa-envelope"></i>mickael.rouge@outlook.fr</p></a>
@@ -217,9 +217,18 @@
                         <form>
                             <div id="blocRenseign" class="blocRenseign">
                                 <ul id="identite" class="identite">
-                                    <div class="ligne"><li>Nom</li><input class="info" id="nom" type="text"></div>
-                                    <div class="ligne"><li>Prenom</li><input class="info" type="text"></div>
-                                    <div class="ligne"><li>Mail</li><input class="info" type="text"></div>
+                                    <div class="ligne">
+                                        <li>Nom</li>
+                                        <input class="info" id="nom" type="text">
+                                    </div>
+                                    <div class="ligne">
+                                        <li>Prenom</li>
+                                        <input class="info" type="text">
+                                    </div>
+                                    <div class="ligne">
+                                        <li>Mail</li>
+                                        <input class="info" type="text">
+                                    </div>
                                 </ul>
                                 <textarea id="commentaire" class="commentaire">
                                 </textarea>
