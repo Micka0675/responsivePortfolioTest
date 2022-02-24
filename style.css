@@ -38,7 +38,6 @@ aside{
 .reseaux{
     display: flex;
     flex-shrink: 0;
-
 }
 
 .title{
@@ -144,7 +143,8 @@ ul{
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+    justify-content: center;
+    height: 1080px;
 }
 
 
@@ -203,7 +203,9 @@ ul{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-evenly;
     background-color: rgba(0, 0, 0, 0.431);
+    max-height: 2000px;
 }
 
 
@@ -286,6 +288,8 @@ ul{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-evenly;
+    max-height: 1400px;
 }
 
 .illu{
@@ -390,7 +394,7 @@ ul{
     display: none;
 }
 
-#choix3{
+.choix3{
     width: 230px;
     height: 25px;
     background-color: #0f0f0f;
@@ -408,7 +412,9 @@ ul{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.431)
+    justify-content: space-evenly;
+    background-color: rgba(0, 0, 0, 0.431);
+    height:1080px;
 }
 
 .coord{
@@ -496,7 +502,7 @@ ul{
         color:wheat;
     }
     
-    #com{
+    .com{
     background-color: rgba(0, 0, 0, 0.431);
     color: wheat;
     border: white;
@@ -598,17 +604,35 @@ ul{
 
 
 
-.lightMode #list a, .lightMode aside a{
+.lightMode .middle a{
     color:wheat;
 }
 
-.lightMode h1,.lightMode h2,.lightMode header , .lightMode #txtMaq ,.lightMode #txtIntS , .lightMode #txtIntW , .lightMode #txtGest , .lightMode #txtBack , .lightMode #txtBase , .lightMode #txtSecu{
+.lightMode aside a{
+    color: #0f0f0f;
+    font-weight: bold;
+}
+
+.lightMode header , .lightMode #txtMaq ,.lightMode #txtIntS , .lightMode #txtIntW , .lightMode #txtGest , .lightMode #txtBack , .lightMode #txtBase , .lightMode #txtSecu{
     
     color: black;
 
 }
 
-.lightMode aside,.lightMode #com {
+.lightMode h2{
+    color:#0f0f0f;
+}
+
+.lightMode h1{
+    color: #6d0606;
+}
+
+.lightMode .choix2, .lightMode .choix1, .lightMode .choix3{
+    border-color: firebrick;
+    color: white;
+}
+
+.lightMode aside {
    color: papayawhip; 
    background-color: rgb(133, 131, 131);
    transition:3s; 
@@ -632,12 +656,12 @@ ul{
     box-shadow: 2px 2px 2px 2px;
 }
 
-.lightMode #logos i , .lightMode #coord a, .lightMode #index {
+.lightMode .bottom i , .lightMode .coord a, .lightMode .ligne li {
     color: #0f0f0f;
 }
 
-.lightMode #centre p{
-    color: #0f0f0f;
+.lightMode .centre p{
+    color: firebrick;
 }
 
 .lightMode #cv img{
@@ -649,126 +673,227 @@ ul{
     color: firebrick;
 }
 
-.lightMode  .list p:hover, .lightMode #logos i:hover , .lightMode .title p:hover{
+.lightMode .middle a:hover{
+    background-color: firebrick;
+    color: #0f0f0f;
+    font-weight: bolder;
+}
+
+.lightMode .bottom i:hover{
     color: firebrick;
 }
 
 .lightMode .cv img:hover{
     border:firebrick solid 2px;
 }
- 
-@media only screen and (min-width:991px) and (max-width:1296px){
+
+.lightMode .com{
+    color: black;
+    background-color: wheat;
+}
+
+@media only screen and (min-width:1297px) and (max-width:1700px){
+    
+    .wrapper{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    
+    
     header{
         font-size:24px;
         display: flex;
-        justify-content: center;
+        justify-content: space-evenly;
     }
 
 
     h2{
-        font-size:19px;
+        font-size:25px;
+    }
+
+    #txtBtn{
+    width: 150px;
+    }
+    
+    #blocSwitch{
+        width: 300px;
+        float: right;
+        position: absolute;
+        top:0px;
+        right: 0px;
+    }
+    
+    #blocSwitch *{
+        display: flex;
+
     }
 
     aside{
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        max-height: 250px;
+        position:relative;
+        background-color: rgba(0, 0, 0, 0.431);
+        order:0;
+    }
+
+    aside a{
         font-size:17px;
     }
+
+    .droite{
+        order:1;
+    }
+
+    .formations{
+        max-height: 1400px;
+    }
+
     .bottom a{
         font-size: 28px;
     }
-
-    #txtBtn{
-        width: 50px;  
-    }
-
-    #blocSwitch{
-        width: 150px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        
-    }
-
-    .switch {
-        width: 60px;
-        height: 34px;
-        float:right;
-        margin: auto;
-      }
 }
 
-@media only screen and (min-width:673px) and (max-width:990px){
+
+@media only screen and (min-width:673px) and (max-width:1296px){
+    
+    .wrapper{
+        display: flex;
+        flex-direction: column;
+    }
+    
     header{
         font-size:15px;
+        display: flex;
+        justify-content: space-evenly;
     }
 
     h2{
-        font-size:14px;
+        font-size:25px;
+    }
+
+    aside{
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        max-height: 300px;
+        position:relative;
+        background-color: rgba(0, 0, 0, 0.431);
+        order:0;
     }
 
     aside a{
-        font-size:13px;
+        font-size:18px;
+    }
+
+    a img{
+        width:120px;
     }
 
     .bottom a{
-        font-size: 23px;
-    }
-    #txtBtn{
-        width: 50px;  
+        font-size: 55px;
     }
 
-    #blocSwitch{
+    #txtBtn{
         width: 150px;
+    }
+        
+    #blocSwitch{
+        width: 100px;
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        
+        position: absolute;
+        top:0px;
+        right: 0px;
+    }
+    
+    #blocSwitch *{
+        display: flex;
+
     }
 
-    .switch {
-        width: 60px;
-        height: 34px;
-        float:right;
-        margin: auto;
-      }
+    .droite{
+        order:1;
+    }
+
+    .coord a{
+        font-size: 24px;
+    }
+
+    .formations{
+        max-height: 1400px;
+    }
+
 }
 
 @media only screen and (max-width:672px){
+    .wrapper{
+        display: flex;
+        flex-direction: column;
+    }
+    
     header{
         font-size:15px;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    aside{
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        max-height: 300px;
+        position:relative;
+        background-color: rgba(0, 0, 0, 0.431);
+        order:0;
     }
 
     h2{
-        font-size:14px;
+        font-size:25px;
     }
 
     aside a{
-        font-size:13px;
+        font-size:16px;
+    }
+
+    a img{
+        width:100px;
     }
 
     .bottom a{
-        font-size: 23px;
+        font-size: 32px;
     }
+    
     #txtBtn{
-        width: 50px;  
-    }
-
-    #blocSwitch{
         width: 150px;
+    }
+        
+    #blocSwitch{
+        width: 100px;
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        
+        position: absolute;
+        top:0px;
+        right: 0px;
+    }
+    
+    #blocSwitch *{
+        display: flex;
+
     }
 
-    .switch {
-        width: 60px;
-        height: 34px;
-        float:right;
-        margin: auto;
-      }
+    .droite{
+        order:1;
+    }
+
+    .formations{
+        max-height: 1400px;
+    }
+
+    .coord a{
+        font-size: 24px;
+    }
+
+
 }
 
 
