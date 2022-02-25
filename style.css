@@ -101,16 +101,99 @@ header{
     background-color: rgba(0, 0, 0, 0.431);
     font-size: 25px;
     color: wheat;
-    display:grid;
-    grid-template-columns: 9fr 1fr;
-    
+    display:flex;
+}
+
+.blocVide{
+    width: 25%;
 }
 
 h1{
     display: flex;
     justify-content: center;
     align-items: center;
+    width:50%;
 }
+
+#txtBtn{
+    width: 150px;
+}
+ 
+ #blocSwitch{
+     width:25%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+ 
+ #blocSwitch *{
+     display: flex;
+}
+ 
+ 
+ /* The switch - the box around the slider */
+ .switch {
+     position: relative;
+     display: inline-block;
+     width: 60px;
+     height: 34px;
+     margin-right: 50px;
+}
+   
+   /* Hide default HTML checkbox */
+   .switch input {
+     opacity: 0;
+     width: 0;
+     height: 0;
+   }
+   
+   /* The slider */
+   .slider {
+     position: absolute;
+     cursor: pointer;
+     top: 0;
+     left: 0;
+     right: 0;
+     bottom: 0;
+     background-color: #ccc;
+     -webkit-transition: .4s;
+     transition: 1.5s;
+   }
+   
+   .slider:before {
+     position: absolute;
+     content: "";
+     height: 26px;
+     width: 26px;
+     left: 4px;
+     bottom: 4px;
+     background-color: white;
+     -webkit-transition: .4s;
+     transition: .4s;
+   }
+   
+   input:checked + .slider {
+     background-color: rgb(221, 167, 20);
+   }
+   
+   input:focus + .slider {
+     box-shadow: 0 0 1px rgb(221, 167, 20);
+   }
+   
+   input:checked + .slider:before {
+     -webkit-transform: translateX(26px);
+     -ms-transform: translateX(26px);
+     transform: translateX(26px);
+   }
+   
+   /* Rounded sliders */
+   .slider.round {
+     border-radius: 34px;
+   }
+   
+   .slider.round:before {
+     border-radius: 50%;
+   }
 
 h2{
     font-size: 30px;
@@ -508,91 +591,20 @@ ul{
     border: white;
     }
 
+.centre{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logosBas{
+    display:none;
+}
+
 /* footer{
     background-color: aqua;
 } */
 
-
-#txtBtn{
-    width: 150px;
- }
- 
- #blocSwitch{
-     width: 300px;
-     display: flex;
-     justify-content: center;
-     align-items: center;
- }
- 
- #blocSwitch *{
-     display: flex;
-
- }
- 
- 
- /* The switch - the box around the slider */
- .switch {
-     position: relative;
-     display: inline-block;
-     width: 60px;
-     height: 34px;
-     margin-right: 50px;
-   }
-   
-   /* Hide default HTML checkbox */
-   .switch input {
-     opacity: 0;
-     width: 0;
-     height: 0;
-   }
-   
-   /* The slider */
-   .slider {
-     position: absolute;
-     cursor: pointer;
-     top: 0;
-     left: 0;
-     right: 0;
-     bottom: 0;
-     background-color: #ccc;
-     -webkit-transition: .4s;
-     transition: 1.5s;
-   }
-   
-   .slider:before {
-     position: absolute;
-     content: "";
-     height: 26px;
-     width: 26px;
-     left: 4px;
-     bottom: 4px;
-     background-color: white;
-     -webkit-transition: .4s;
-     transition: .4s;
-   }
-   
-   input:checked + .slider {
-     background-color: rgb(221, 167, 20);
-   }
-   
-   input:focus + .slider {
-     box-shadow: 0 0 1px rgb(221, 167, 20);
-   }
-   
-   input:checked + .slider:before {
-     -webkit-transform: translateX(26px);
-     -ms-transform: translateX(26px);
-     transform: translateX(26px);
-   }
-   
-   /* Rounded sliders */
-   .slider.round {
-     border-radius: 34px;
-   }
-   
-   .slider.round:before {
-     border-radius: 50%;
-   }
 
    .lightMode {
     font-family: 'Quicksand',sans-serif;
@@ -613,10 +625,12 @@ ul{
     font-weight: bold;
 }
 
-.lightMode header , .lightMode #txtMaq ,.lightMode #txtIntS , .lightMode #txtIntW , .lightMode #txtGest , .lightMode #txtBack , .lightMode #txtBase , .lightMode #txtSecu{
-    
-    color: black;
+.lightMode header{
+    background-color: rgb(133, 131, 131);
+}
 
+.lightMode header , .lightMode #txtMaq ,.lightMode #txtIntS , .lightMode #txtIntW , .lightMode #txtGest , .lightMode #txtBack , .lightMode #txtBase , .lightMode #txtSecu{
+    color: black;
 }
 
 .lightMode h2{
@@ -624,12 +638,13 @@ ul{
 }
 
 .lightMode h1{
-    color: #6d0606;
+    color: #0f0f0f;
 }
 
 .lightMode .choix2, .lightMode .choix1, .lightMode .choix3{
-    border-color: firebrick;
-    color: white;
+    border-color:#0f0f0f;
+    color:#0f0f0f;
+    background-color: wheat;
 }
 
 .lightMode aside {
@@ -661,7 +676,7 @@ ul{
 }
 
 .lightMode .centre p{
-    color: firebrick;
+    color:#0f0f0f;
 }
 
 .lightMode #cv img{
@@ -688,8 +703,8 @@ ul{
 }
 
 .lightMode .com{
-    color: black;
-    background-color: wheat;
+    color: wheat;
+    background-color:#0f0f0f;
 }
 
 /* @media only screen and (min-width:1297px) and (max-width:1700px){
@@ -769,6 +784,14 @@ ul{
         justify-content: space-evenly;
     }
 
+    .blocVide{
+       display:none;
+    }
+
+    h1{
+        width: 100%;
+    }
+
     h2{
         font-size:25px;
     }
@@ -791,19 +814,21 @@ ul{
     }
 
     .bottom a{
-        font-size: 55px;
+        /* font-size: 55px; */
+        display: none;
     }
 
     #txtBtn{
         width: 150px;
+        padding-left: 25px;
     }
         
     #blocSwitch{
-        width: 100px;
+        width: 150px;
         display: flex;
         flex-direction: column;
         position: absolute;
-        top:0px;
+        top:100px;
         right: 0px;
     }
     
@@ -824,6 +849,17 @@ ul{
         max-height: 1400px;
     }
 
+    .logosBas{
+        display:flex;
+        width: 80%;
+        justify-content: space-evenly;
+        font-size: 55px;
+    }
+
+    .lightMode .logosBas i{
+        color: firebrick;
+    }
+
 }
 
 @media only screen and (max-width:672px){
@@ -836,6 +872,14 @@ ul{
         font-size:15px;
         display: flex;
         justify-content: space-evenly;
+    }
+
+    .blocVide{
+        display:none;
+    }
+
+    h1{
+        width: 100%;
     }
 
     aside{
@@ -860,11 +904,13 @@ ul{
     }
 
     .bottom a{
-        font-size: 32px;
+        /* font-size: 32px; */
+        display:none;
     }
     
     #txtBtn{
         width: 150px;
+        padding-left: 25px;
     }
         
     #blocSwitch{
@@ -872,7 +918,7 @@ ul{
         display: flex;
         flex-direction: column;
         position: absolute;
-        top:0px;
+        top:100px;
         right: 0px;
     }
     
@@ -893,6 +939,16 @@ ul{
         font-size: 24px;
     }
 
+    .logosBas{
+        display:flex;
+        width: 80%;
+        justify-content: space-evenly;
+        font-size: 55px;
+    }
+
+    .lightMode .logosBas i{
+        color: firebrick;
+    }
 
 }
 
