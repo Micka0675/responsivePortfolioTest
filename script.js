@@ -247,7 +247,7 @@ function detail4()
 {
         {
             document.getElementById('pop4').style.visibility = "visible";
-            pop[3].innerHTML = "<p>Site test associatif</p>";
+            pop[3].innerHTML = "<p>Jeu Motus mobile responsive</p>";
         }
         
 }
