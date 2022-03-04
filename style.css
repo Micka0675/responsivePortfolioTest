@@ -847,7 +847,7 @@ ul{
 
     i.left{
         position:fixed;
-        top:36%;
+        top:42%;
         left:5%;
         transform: rotate(90deg);
     }
@@ -855,7 +855,7 @@ ul{
     i.right{
         font-size: 35px;
         position:fixed;
-        top:9%;
+        top:11%;
         left:5%;
         transform: rotate(90deg);
         display: none;
@@ -926,7 +926,7 @@ ul{
 
 }
 
-@media only screen and (max-width:672px){
+@media only screen and (min-width:500px) and (max-width:672px){
     .wrapper{
         display: flex;
         flex-direction: column;
@@ -997,7 +997,7 @@ ul{
 
     i.left{
         position:fixed;
-        top:36%;
+        top:42%;
         left:5%;
         transform: rotate(90deg);
     }
@@ -1005,7 +1005,119 @@ ul{
     i.right{
         font-size: 35px;
         position:fixed;
-        top:9%;
+        top:14%;
+        left:5%;
+        transform: rotate(90deg);
+    }
+
+    .droite{
+        order:1;
+    }
+
+    .formations{
+        max-height: 1400px;
+    }
+
+    .coord a{
+        font-size: 24px;
+    }
+
+    .logosBas{
+        display:flex;
+        width: 80%;
+        justify-content: space-evenly;
+        font-size: 55px;
+    }
+
+    .lightMode .logosBas i{
+        color: firebrick;
+    }
+
+}
+
+@media only screen and (max-width:499px){
+
+    
+    .wrapper{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    header{
+        font-size:9px;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .blocVide{
+        display:none;
+    }
+
+    h1{
+        width: 100%;
+    }
+
+    aside{
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        max-height: 300px;
+        position:relative;
+        order:0;
+    }
+
+    .defaultAs{
+        background-color: rgb(46, 46, 46);
+    }
+
+    h2{
+        font-size:25px;
+    }
+
+    aside a{
+        font-size:11px;
+    }
+
+    a img{
+        width:75px;
+    }
+
+    .bottom a{
+        /* font-size: 32px; */
+        display:none;
+    }
+    
+    #txtBtn{
+        width: 150px;
+        padding-left: 45px;
+        font-size: 12px;
+    }
+        
+    #blocSwitch{
+        width: 80px;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top:25%;
+        left: 85%;
+        font-family: 'Lato' , sans-serif;
+    }
+    
+    #blocSwitch *{
+        display: flex;
+
+    }
+
+    i.left{
+        position:fixed;
+        top:42%;
+        left:5%;
+        transform: rotate(90deg);
+    }
+    
+    i.right{
+        font-size: 35px;
+        position:fixed;
+        top:14%;
         left:5%;
         transform: rotate(90deg);
     }
