@@ -6,7 +6,8 @@
 body{
     background-color:#0f0f0f;
     color:wheat;
-    transition:2s
+    transition:2s;
+    cursor:auto;
 }
 a{
     text-decoration: none;
@@ -17,16 +18,33 @@ a{
 .wrapper{
     display: grid;
     grid-template-columns: 1fr 8fr;
+    width: 100%;
+}
+
+.newWrap{
+    display: grid;
+    grid-template-columns: 1fr ;
+    width: 100%;
+    top:0;
 }
 /* :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::ASIDE:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
-aside{
+.defaultAs{
     display: grid;
     grid-template-rows: 1fr 2fr 0.5fr;
+    width: 100%;
     height: 970px;
     position:sticky;
     top:0;
     background-color: rgba(0, 0, 0, 0.431);
+    transition: 1s;
+}
 
+.newAside{
+    display: none;
+    width: 100%;
+    height: 970px;
+    position:sticky;
+    background-color: rgba(0, 0, 0, 0.431);
 }
 
 .title img{
@@ -115,15 +133,37 @@ h1{
     width:50%;
 }
 
+i.left{
+    font-size: 35px;
+    position: fixed;
+    top:50%;
+    left: 12%;
+    cursor:pointer;
+}
+
+i.right{
+    font-size: 35px;
+    position: fixed;
+    top:50%;
+    left:2%;
+    display: none;
+    cursor:pointer;
+}
+
 #txtBtn{
     width: 150px;
 }
  
  #blocSwitch{
-     width:25%;
+     width:110px;
      display: flex;
+     flex-direction: column;
      justify-content: center;
      align-items: center;
+     position: absolute;
+     top:0;
+     left: 850%;
+     font-family: 'Lato',sans-serif;
 }
  
  #blocSwitch *{
@@ -641,6 +681,10 @@ ul{
     color: #0f0f0f;
 }
 
+.lightMode i.left , .lightMode i.right{
+    color: #0f0f0f;
+}
+
 .lightMode .choix2, .lightMode .choix1, .lightMode .choix3{
     border-color:#0f0f0f;
     color:#0f0f0f;
@@ -705,6 +749,11 @@ ul{
 .lightMode .com{
     color: wheat;
     background-color:#0f0f0f;
+}
+
+.lightMode #txtBtn{
+    color:#0f0f0f;
+    font-weight: bold;
 }
 
 /* @media only screen and (min-width:1297px) and (max-width:1700px){
@@ -796,17 +845,36 @@ ul{
         font-size:25px;
     }
 
+    i.left{
+        position:fixed;
+        top:36%;
+        left:5%;
+        transform: rotate(90deg);
+    }
+    
+    i.right{
+        font-size: 35px;
+        position:fixed;
+        top:9%;
+        left:5%;
+        transform: rotate(90deg);
+        display: none;
+    }
+
     aside{
         display: grid;
         grid-template-columns: 1fr 2fr 1fr;
         max-height: 300px;
         position:relative;
-        background-color: rgba(0, 0, 0, 0.431);
         order:0;
     }
 
+    .defaultAs{
+        background-color: rgb(46, 46, 46);
+    }
+
     aside a{
-        font-size:18px;
+        font-size:16px;
     }
 
     a img{
@@ -824,12 +892,8 @@ ul{
     }
         
     #blocSwitch{
-        width: 150px;
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        top:100px;
-        right: 0px;
+        top:25%;
+        left: 85%;
     }
     
     #blocSwitch *{
@@ -887,8 +951,11 @@ ul{
         grid-template-columns: 1fr 2fr 1fr;
         max-height: 300px;
         position:relative;
-        background-color: rgba(0, 0, 0, 0.431);
         order:0;
+    }
+
+    .defaultAs{
+        background-color: rgb(46, 46, 46);
     }
 
     h2{
@@ -896,7 +963,7 @@ ul{
     }
 
     aside a{
-        font-size:16px;
+        font-size:14px;
     }
 
     a img{
@@ -918,13 +985,29 @@ ul{
         display: flex;
         flex-direction: column;
         position: absolute;
-        top:100px;
-        right: 0px;
+        top:25%;
+        left: 82%;
+        font-family: 'Lato' , sans-serif;
     }
     
     #blocSwitch *{
         display: flex;
 
+    }
+
+    i.left{
+        position:fixed;
+        top:36%;
+        left:5%;
+        transform: rotate(90deg);
+    }
+    
+    i.right{
+        font-size: 35px;
+        position:fixed;
+        top:9%;
+        left:5%;
+        transform: rotate(90deg);
     }
 
     .droite{

@@ -4,11 +4,11 @@
         <title>My Portfolio</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="style.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
     </head>
     <body>
-        <div class="wrapper">
-            <aside>
+        <div class="wrapper" id ="wrapper">
+            <aside class="defaultAs">
                 <section id="title" class="title">
                     <a href="#hautDePage"><p>Mickael Rougé</p></a>
                     <a href="#hautDePage"><img src="images/Image1.jpg" alt="photo"></a>
@@ -19,6 +19,13 @@
                     <a href="#formations"><p class="link">Aptitudes</p></a>
                     <a href="#contact"><p class="link">Me contacter</p></a>
                 </section>
+                <div id="blocSwitch"> 
+                    <p id="txtBtn">light mode</p>
+                    <label class="switch">
+                        <input id="light" type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
                 <section id="logos" class="bottom">
                     <div class="reseaux"><a href="https://www.linkedin.com/in/mickael-roug%C3%A9-877090130" target="blank"><i class="fab fa-linkedin"></i></a></div>
                     <div class="reseaux"><a href="https://github.com/Micka0675" target="blank"><i class="fab fa-github-square"></i></a></div>
@@ -29,15 +36,10 @@
                 <header>
                     <div class="blocVide"></div>
                     <h1 id="hautDePage">Developpeur Web & Web Mobile</h1>
-                    <div id="blocSwitch"> 
-                        <p id="txtBtn">light mode</p>
-                        <label class="switch">
-                            <input id="light" type="checkbox">
-                            <span class="slider round"></span>
-                        </label>
-                    </div>
                 </header>
                 <article id="competences" class="competences">
+                    <i class="fa-solid fa-circle-chevron-right right" id="right"></i>
+                    <i class="fa-solid fa-circle-chevron-left left" id="left"></i>
                     <h2>Compétences</h2>
                     <section class="blocLog">
                         <div class="logages">

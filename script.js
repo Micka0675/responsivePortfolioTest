@@ -12,16 +12,18 @@ var choix2 = document.getElementById("choix2");
 var choix3 = document.getElementById("choix3");
 var opts = document.querySelectorAll(".opts");
 var txtMaq = document.getElementById("txtMaq");
-
+var wrapper = document.getElementById("wrapper");
+var aside = document.getElementsByTagName("aside")[0];
+var left = document.getElementById("left");
+var right = document.getElementById("right");
 
 console.log(choix1);
 console.log(opts);
 console.log(txtMaq);
 
-
+left.addEventListener('click', hideNav);
+right.addEventListener('click', popNav);
 choix1.addEventListener('change', popDiv);
-
-
 envoi.addEventListener('click', afficheInfo);
 
 blocPendu.addEventListener('mouseover',detail);
@@ -36,11 +38,24 @@ blocCv.addEventListener('mouseout',hide3);
 blocSp.addEventListener('mouseover',detail4);
 blocSp.addEventListener('mouseout',hide4);
 
+function hideNav(){
+    wrapper.setAttribute('class',"newWrap");
+    wrapper.classList.remove("wrapper");
+    aside.setAttribute('class',"newAside");
+    aside.classList.remove('defaultAs');
+    left.style.display = "none";
+    right.style.display = "block";
+}
 
-// for ( i = 0 ; i <= real[4] ; i++ )
-//     {
-//         real[i].addEventListener('onmouseover', detail);
-//     }
+function popNav(){
+    wrapper.setAttribute('class',"wrapper");
+    wrapper.classList.remove("newWrap");
+    aside.setAttribute('class',"defaultAs");
+    aside.classList.remove('newAside');
+    left.style.display = "block";
+    right.style.display = "none";
+}
+
 function popDiv()
 {
     var txtIntS = document.getElementById('txtIntS');
