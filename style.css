@@ -986,20 +986,17 @@ ul{
     }
     
     #txtBtn{
-        width: 50px;
+        width: 300px;
         position: absolute;
-        right: 52%;
-        top: 70%;
         text-align: center;
     }
         
     #blocSwitch{
         width: 100px;
         display: flex;
-        flex-direction: column;
         position: absolute;
-        top:25%;
-        left: 82%;
+        top:80%;
+        left: 50%;
         font-family: 'Lato' , sans-serif;
     }
     
@@ -1007,6 +1004,7 @@ ul{
         display: flex;
 
     }
+   
 
     i.left{
         position:fixed;
@@ -1088,7 +1086,7 @@ ul{
 
     .defaultAs{
         background-color: rgb(46, 46, 46);
-        min-width: 332px;
+        min-width: 330px;
     }
 
     h2{
@@ -1113,17 +1111,22 @@ ul{
         /* padding-left: 45px; */
         font-size: 12px;
         position: absolute;
-        right: 40%;
+        right:30%;
         top:-140%;
+    }
+
+    .switch{
+        margin-left: 0px;
+        width: 60px;
     }
         
     #blocSwitch{
-        width: 80px;
+        width: 60px;
         display: flex;
         flex-direction: column;
         position: absolute;
-        top:25%;
-        left: 85%;
+        top:80%;
+        left: 50%;
         font-family: 'Lato' , sans-serif;
     }
     
