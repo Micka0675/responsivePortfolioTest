@@ -152,17 +152,18 @@ i.right{
 
 #txtBtn{
     width: 150px;
+    margin-left: 30px;
 }
  
  #blocSwitch{
-     width:110px;
+     width:90px;
      display: flex;
      flex-direction: column;
      justify-content: center;
      align-items: center;
-     position: absolute;
-     top:0;
-     left: 850%;
+     position:absolute;
+     top:28%;
+     left: 40%;
      font-family: 'Lato',sans-serif;
 }
  
@@ -887,8 +888,8 @@ ul{
     }
 
     #txtBtn{
-        width: 150px;
-        padding-left: 25px;
+        width: 100px;
+        margin-right: 50px;
     }
         
     #blocSwitch{
@@ -910,8 +911,17 @@ ul{
     }
 
     .formations{
-        max-height: 1400px;
+        max-height: 1600px;
     }
+
+    .illu{
+        width: 300px;
+    }
+
+    #illuBig{
+        width: 200px;
+    }
+
 
     .logosBas{
         display:flex;
@@ -976,8 +986,8 @@ ul{
     }
     
     #txtBtn{
-        width: 150px;
-        padding-left: 25px;
+        width: 80px;
+        margin-right: 40px;
     }
         
     #blocSwitch{
@@ -1015,7 +1025,15 @@ ul{
     }
 
     .formations{
-        max-height: 1400px;
+        max-height: 1600px;
+    }
+
+    .illu{
+        width: 300px;
+    }
+
+    #illuBig{
+        width: 200px;
     }
 
     .coord a{
@@ -1067,6 +1085,7 @@ ul{
 
     .defaultAs{
         background-color: rgb(46, 46, 46);
+        min-width: 332px;
     }
 
     h2{
@@ -1087,9 +1106,12 @@ ul{
     }
     
     #txtBtn{
-        width: 150px;
-        padding-left: 45px;
+        width: 50px;
+        /* padding-left: 45px; */
         font-size: 12px;
+        position: absolute;
+        right: 40%;
+        top:-140%;
     }
         
     #blocSwitch{
@@ -1132,6 +1154,18 @@ ul{
 
     .coord a{
         font-size: 24px;
+    }
+
+    .illu{
+        width: 300px;
+    }
+
+    #illuBig{
+        width: 200px;
+    }
+
+    .formations{
+        max-height: 1700px;
     }
 
     .logosBas{
