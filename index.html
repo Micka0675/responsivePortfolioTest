@@ -3,34 +3,35 @@
     <head>
         <title>My Portfolio</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8">
         <link rel="stylesheet" type="text/css" href="style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
     </head>
     <body>
         <div class="wrapper" id ="wrapper">
             <aside class="defaultAs">
-                <section id="title" class="title">
+                <div id="titre" class="titre">
                     <a href="#hautDePage"><p>Mickael Rougé</p></a>
                     <a href="#hautDePage"><img src="images/Image1.jpg" alt="photo"></a>
-                </section>
-                <section id="list" class="middle">
+                </div>
+                <div id="list" class="middle">
                     <a href="#competences"><p class="link">Compétences</p></a>
                     <a href="#realisations"><p class="link">Réalisations</p></a>
                     <a href="#formations"><p class="link">Aptitudes</p></a>
                     <a href="#contact"><p class="link">Me contacter</p></a>
-                </section>
-                <div id="blocSwitch"> 
-                    <p id="txtBtn">light mode</p>
+                </div>
+                <div id="blocSwitch" class="blocSwitch"> 
+                    <p class="txtBtn">light mode</p>
                     <label class="switch">
                         <input id="light" type="checkbox">
                         <span class="slider round"></span>
                     </label>
                 </div>
-                <section id="logos" class="bottom">
+                <div id="logos" class="bottom">
                     <div class="reseaux"><a href="https://www.linkedin.com/in/mickael-roug%C3%A9-877090130" target="blank"><i class="fab fa-linkedin"></i></a></div>
                     <div class="reseaux"><a href="https://github.com/Micka0675" target="blank"><i class="fab fa-github-square"></i></a></div>
                     <div class="reseaux"><a href="https://codepen.io/Mickael0675" target="blank"><i class="fab fa-codepen"></i></a></div>
-                </section>
+                </div>
             </aside>
             <div class="droite">
                 <header>
@@ -41,54 +42,54 @@
                     <i class="fa-solid fa-circle-chevron-right right" id="right"></i>
                     <i class="fa-solid fa-circle-chevron-left left" id="left"></i>
                     <h2>Compétences</h2>
-                    <section class="blocLog">
+                    <div class="blocLog">
                         <div class="logages">
-                            <img src="images/html.png">
+                            <img src="images/html.png" alt="logoHtml">
                         </div>
                         <div class="logages">
-                            <img src="images/css.png">
+                            <img src="images/css.png" alt="logoCss">
                         </div>
                         <div class="logages">
-                            <img src="images/js.png">
+                            <img src="images/js.png" alt="logoJs">
                         </div>
                         <div class="logages">
-                            <img id="sql" src="images/mysql.png">
+                            <img class="sql" src="images/mysql.png" alt="logoMySql">
                         </div>
                         <div class="logages">
-                            <img id="php" src="images/php.png">
+                            <img class="php" src="images/php.png" alt="logoPhp">
                         </div>
                         <div class="logages">
-                            <img src="images/bootstrap.png">
+                            <img src="images/bootstrap.png" alt="logoBoot">
                         </div>
                         <div class="logages">
-                            <img id="wordpress" src="images/wordpress.png">
+                            <img class="wordpress" src="images/wordpress.png" alt="logoWp">
                         </div>
                         <div class="logages">
-                            <img id="ajax" src="images/ajax.png">
-                        </div class="logages">
-                    </section>
-                    <section class="cv">
+                            <img class="ajax" src="images/ajax.png" alt="logoAjax">
+                        </div>
+                    </div>
+                    <div class="cv">
                         <a href="images/cv.jpg"><img src="images/cv.jpg" alt="cv"></a>
-                    </section>
+                    </div>
                 </article>
                 <article id="realisations" class="realisations">
                     <h2>Realisations</h2>
                     <div class="blocReal">
                         <a class="real" href="https://micka0675.github.io/jeuDuPendu/" target="blank">
-                            <section id="blocPendu"></section>
-                            <div class="pop"id="pop1"></div>
+                            <div id="blocPendu" class="blocPendu"></div>
+                            <div class="pop" id="pop1"></div>
                         </a>
                         <a class="real" href="https://micka0675.github.io/bblioSiteConcours/" target="blank">
-                            <section id="blocBblio"></section>
-                            <div class="pop"id="pop2"></div>
+                            <div id="blocBblio" class="blocBblio"></div>
+                            <div class="pop" id="pop2"></div>
                         </a>
                         <a class="real" href="https://micka0675.github.io/cvEnLigne/" target="blank">
-                            <section id="blocCv"></section>
-                            <div class="pop"id="pop3"></div>
+                            <div id="blocCv" class="blocCv"></div>
+                            <div class="pop" id="pop3"></div>
                         </a>
                         <a class="real" href="https://micka0675.github.io/MotusMobile/" target="blank">
-                            <section id="blocSp"></section>
-                            <div class="pop"id="pop4"></div>
+                            <div id="blocSp" class="blocSp"></div>
+                            <div class="pop" id="pop4"></div>
                         </a>   
                     </div>
                 </article>
@@ -153,8 +154,8 @@
                     <div id="txtGest" class="txtGest">
                         <h3>Réaliser une interface utilisateur avec une solution de 
                             gestion de contenu ou e-commerce </h3>
-                            <img src="images/commerce.png" id ="illuBig" alt="e-commerce">
-                        <p class="txtDesc">À partir d’un besoin client, installer, paramétrer ou maintenir une solution de gestion de contenu ou d’ecommerce afin de réaliser de manière facilitée un site vitrine ou une boutique en ligne, créer les différents 
+                            <img src="images/commerce.png" id ="illuBig" class ="illuBig" alt="e-commerce">
+                        <p class="txtDesc">À partir d’un besoin client, installer, paramétrer ou maintenir une solution de gestion de contenu ou d’e-commerce afin de réaliser de manière facilitée un site vitrine ou une boutique en ligne, créer les différents 
                             comptes utilisateurs avec leurs droits et rôles dans le respect des règles de sécurité, créer ou adapter la 
                             structure du site ou de la boutique afin de permettre à l’utilisateur d’en gérer le contenu et d’en suivre 
                             l’activité.
@@ -169,7 +170,7 @@
                     <div id="txtBack" class="txtBack">
                         <h3>Développer la partie back-end d’une application web ou web mobile
                         </h3>
-                            <img src="images/base.png" id ="illuBig" alt="back-end">
+                            <img src="images/base.png" class ="illuBig" alt="back-end">
                         <p class="txtDesc">À partir des fonctionnalités décrites dans le dossier de conception technique, et dans le respect des 
                             bonnes pratiques de développement et de sécurisation d'application web, coder, tester et documenter les 
                             traitements côté serveur, afin d’assurer la collecte, le traitement et la restitution d’informations numériques.
@@ -181,7 +182,7 @@
                     </div>
                     <div id="txtBase" class="txtBase">
                         <h3>Créer une Base de données</h3>
-                            <img src="images/sqlBase.png" id ="illuBig" alt="Data">
+                            <img src="images/sqlBase.png" class = "illuBig" alt="Data">
                         <p class="txtDesc">À partir d’une demande client nécessitant le stockage de données, organiser les données et définir un 
                             schéma physique. A l’aide d’un SGBD, écrire et exécuter le script de création de la base de données, 
                             insérer les données de test, définir les droits d'utilisation et prévoir les procédures de sauvegarde et de 
@@ -197,7 +198,7 @@
                     <div id="txtSecu" class="txtSecu">
                         <h3>Elaborer et mettre en œuvre des composants dans une application de gestion de 
                             contenu ou e-commerce</h3>
-                            <img src="images/ecommerce.png" id ="illuBig" alt="Data">
+                            <img src="images/ecommerce.png" class ="illuBig" alt="Data">
                         <p class="txtDesc">À partir du cahier des charges fonctionnel et du système de gestion de contenu ou d'e-commerce, dans le 
                             respect des bonnes pratiques de développement, de la solution logicielle, intégrer ou coder, tester et 
                             documenter des modules complémentaires afin de rendre le site web adapté aux besoins des utilisateurs, 
@@ -211,29 +212,29 @@
                 </article>
                 <article id="contact" class="contact">
                     <h2>Me contacter (Work In Progress)</h2>
-                    <section id="coord" class="coord">
+                    <div id="coord" class="coord">
                         <a href="mailto:mickael.rouge@outlook.fr" target="blank"><p><i class="fas fa-envelope"></i>mickael.rouge@outlook.fr</p></a>
                         <a href="https://www.linkedin.com/in/mickael-roug%C3%A9-877090130" target="blank"><p><i class="fab fa-linkedin"></i>Linkedin : Mickael Rougé</p></a>
                         <a href="https://github.com/Micka0675" target="blank"><p><i class="fab fa-github-square"></i>GitHub : Mickael R.</p></a>
                         <a href="https://codepen.io/Mickael0675" target="blank"><p><i class="fab fa-codepen"></i>CodePen : Mickael0675</p></a>
-                    </section>
-                    <article id="blocForm" class="blocForm">
+                    </div>
+                    <div id="blocForm" class="blocForm">
                         <form>
                             <div id="blocRenseign" class="blocRenseign">
-                                <ul id="identite" class="identite">
+                                <div id="identite" class="identite">
                                     <div class="ligne">
-                                        <li>Nom</li>
+                                        <p>Nom</p>
                                         <input class="info" id="nom" type="text">
                                     </div>
                                     <div class="ligne">
-                                        <li>Prenom</li>
+                                        <p>Prenom</p>
                                         <input class="info" type="text">
                                     </div>
                                     <div class="ligne">
-                                        <li>Mail</li>
+                                        <p>Mail</p>
                                         <input class="info" type="text">
                                     </div>
-                                </ul>
+                                </div>
                                 <textarea id="commentaire" class="commentaire">
                                 </textarea>
                             </div>
@@ -241,16 +242,17 @@
                             <input id="com" class="com" type="button" value="Envoyer">
                             <div id="comBox" class="comBox"></div>
                         </form>
+                    </div>
                 </article>
                 <footer>
-                    <section id="centre" class="centre">
-                        <section id="logosBas" class="logosBas">
+                    <div id="centre" class="centre">
+                        <div id="logosBas" class="logosBas">
                             <div class="reseaux"><a href="https://www.linkedin.com/in/mickael-roug%C3%A9-877090130" target="blank"><i class="fab fa-linkedin"></i></a></div>
                             <div class="reseaux"><a href="https://github.com/Micka0675" target="blank"><i class="fab fa-github-square"></i></a></div>
                             <div class="reseaux"><a href="https://codepen.io/Mickael0675" target="blank"><i class="fab fa-codepen"></i></a></div>
-                        </section>
+                        </div>
                         <p>Design & Built by Mickaël Rougé, 2022.</p>
-                    </section>
+                    </div>
                 </footer>
             </div>
         </div>
