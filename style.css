@@ -720,7 +720,11 @@ ul{
     box-shadow: 2px 2px 2px 2px;
 }
 
-.lightMode .bottom i , .lightMode .coord a, .lightMode .ligne li {
+.lightMode .bottom i{
+    color: wheat;
+}
+
+.lightMode .coord a, .lightMode .ligne li {
     color: #0f0f0f;
 }
 
