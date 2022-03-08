@@ -37,6 +37,7 @@ a{
     top:0;
     background-color: rgba(0, 0, 0, 0.431);
     transition: 1s;
+    z-index: 1;
 }
 
 .newAside{
@@ -636,6 +637,7 @@ ul{
     flex-direction: column;
     align-items: center;
     font-family: 'Lato',sans-serif;
+    background-color: rgba(0, 0, 0, 0.431);
 }
 
 .logosBas{
@@ -662,15 +664,16 @@ ul{
 }
 
 .lightMode aside a{
-    color: #0f0f0f;
+    color: wheat;
     font-weight: bold;
+   
 }
 
 .lightMode header{
-    background-color: rgb(133, 131, 131);
+    background-color: #0f0f0f;
 }
 
-.lightMode header , .lightMode .txtMaq ,.lightMode .txtIntS , .lightMode .txtIntW , .lightMode .txtGest , .lightMode .txtBack , .lightMode .txtBase , .lightMode .txtSecu{
+.lightMode .txtMaq ,.lightMode .txtIntS , .lightMode .txtIntW , .lightMode .txtGest , .lightMode .txtBack , .lightMode .txtBase , .lightMode .txtSecu{
     color: black;
 }
 
@@ -679,7 +682,7 @@ ul{
 }
 
 .lightMode h1{
-    color: #0f0f0f;
+    color: wheat;
 }
 
 .lightMode i.left , .lightMode i.right{
@@ -694,7 +697,7 @@ ul{
 
 .lightMode aside {
    color: papayawhip; 
-   background-color: rgb(133, 131, 131);
+   background-color: rgb(36, 35, 35);
    transition:3s; 
 
 }
@@ -702,6 +705,7 @@ ul{
 .lightMode .logages img {
     filter: drop-shadow(7px 7px 7px black);
     -webkit-filter: drop-shadow(7px 7px 7px black);
+    z-index: 0;
 }
 
 .lightMode .realisations a{
@@ -753,7 +757,7 @@ ul{
 }
 
 .lightMode .txtBtn{
-    color:#0f0f0f;
+    color:wheat;
     font-weight: bold;
 }
 
@@ -805,6 +809,7 @@ ul{
         max-height: 300px;
         position:relative;
         order:0;
+        
     }
 
     .defaultAs{
