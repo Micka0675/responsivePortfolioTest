@@ -235,7 +235,7 @@ function detail()
 {
         {
             document.getElementById('pop1').style.visibility = "visible";
-            pop[0].innerHTML = "<p>Un jeu du pendu réalisé en Javascript</p>";
+            pop[0].innerHTML = "<p>Site web Arboriste 06</p>";
         }
         
 }
@@ -244,7 +244,7 @@ function detail2()
 {
         {
             document.getElementById('pop2').style.visibility = "visible";
-            pop[1].innerHTML = "<p>Site test realisé dans le cadre d'un ECF</p>";
+            pop[1].innerHTML = "<p>Site web Riviera Production</p>";
         }
         
 }
